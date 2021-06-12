@@ -1,0 +1,5 @@
+CSVWebApp/__pycache__/
+CSVWebApp/database.db
+CSVWebApp/.coverage
+CSVWebApp/.ipynb_checkpoints/
+CSVWebApp/test/__pycache__/
