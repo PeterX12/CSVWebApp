@@ -1,0 +1,493 @@
+/* CSS for other users */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    background: #111111;
+  }
+  
+  nav
+  {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 319px;
+      display: table;
+      margin: 0 auto;      
+  }
+  
+  nav a
+  {
+      position: relative;
+      width: 33.333%;
+      display: table-cell;
+      text-align: center;
+      color: #949494;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: 0.2s ease color;
+  }
+  
+  nav a:before, nav a:after
+  {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 0.2s ease transform;
+  }
+  
+  nav a:before
+  {
+      top: 0;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+  }
+  
+  nav a:after
+  {
+      top: 5px;
+      left: 18px;
+      width: 4px;
+      height: 4px
+  }
+  
+  nav a:nth-child(1):before
+  {
+      background-color: yellow;
+  }
+  
+  nav a:nth-child(1):after
+  {
+      background-color: red;
+  }
+  
+  nav a:nth-child(2):before
+  {
+      background-color: #00e2ff;
+  }
+  
+  nav a:nth-child(2):after
+  {
+      background-color: #89ff00;
+  }
+  
+  nav a:nth-child(3):before
+  {
+      background-color: purple;
+  }
+  
+  nav a:nth-child(3):after
+  {
+      background-color: palevioletred;
+  }
+  
+  nav a:nth-child(4):before
+  {
+      background-color: yellow;
+  }
+  
+  nav a:nth-child(4):after
+  {
+      background-color: black;
+  }
+  
+  nav a:nth-child(5):before
+  {
+      background-color: #f49f1c;
+  }
+  
+  nav a:nth-child(5):after
+  {
+      background-color: #00154f;
+  }
+  
+  #indicator
+  {
+      position: absolute;
+      left: 3.5%;
+      bottom: 0;
+      width: 10%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: 0.2s ease left;
+  }
+  
+  nav a:hover
+  {
+      color: #fff;
+  }
+  
+  nav a:hover:before, nav a:hover:after
+  {
+      transform: scale(1);
+  }
+  
+  nav a:nth-child(1):hover ~ #indicator
+  {
+    width: 10%;
+    background: linear-gradient(130deg, yellow, red);
+  }
+  
+  nav a:nth-child(2):hover ~ #indicator
+  {
+    width: 11%;
+    left: 21%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+  }
+  
+  nav a:nth-child(3):hover ~ #indicator
+  {
+    width: 12%;
+    left: 39.5%;
+    background: linear-gradient(130deg, purple, palevioletred);
+  }
+  nav a:nth-child(4):hover ~ #indicator
+  {
+    width: 18%;
+    left: 58.5%;
+    background: linear-gradient(130deg, yellow, black);
+  }
+  
+  nav a:nth-child(5):hover ~ #indicator
+  {
+    width: 13.5%;
+    left: 83.5%;
+    background: linear-gradient(130deg, #f49f1c, #00154f);
+  }
+  
+  #ytd-url {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    margin: 20px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #000;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+    z-index: 125;
+  }
+   
+  .menu
+  {
+    transform: translateY(90%);
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .menuCell
+  {
+    -webkit-box-flex: 0;
+    flex: 0 1 250px;
+    max-width: 250px;
+    height: 137.5px;
+    margin: 65.4px 12.5px 25px;
+    position: relative;
+    padding: 0.5em;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.1);
+  }
+  
+  .menuCellImg
+  {
+    
+    object-fit: cover;
+    object-position: center; 
+    filter: grayscale(100%);
+  }
+  
+  .menuCellTitle
+  {
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.75em;
+    transition: opacity 350ms;
+    
+  }
+  
+  .menuCellTitle > small
+  {
+    font-weight: 300;
+    margin-top: 0.25em;
+  }
+  
+  .menuCell::before,
+  .menuCell::after
+  {
+    content: '';
+  }
+  
+  .menuCell::before,
+  .menuCell::after,
+  .menuCellImg
+  {
+    top: -50%;
+    width: 100%;
+    height: 200%;
+    display: block;
+    position: absolute;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+  }
+  
+  .menuCell::before
+  {
+    background: #fff;
+    transform: scale(1.055);
+  }
+  
+  .menuCell::after
+  {
+    background: #111111;
+    opacity: 0.7;
+    transition: opacity 350ms;
+    -webkit-transition: opacity 350ms;
+  }
+  
+  .menuCell:hover
+  .menuCellTitle
+  {
+    opacity: 0;
+  }
+  
+  .menuCell:hover
+  .menuCellImg
+  {
+    filter: grayscale(0%);
+  }
+  
+  .menuCell:hover::before
+  {
+    background: yellow;
+  }
+  
+  .menuCell:hover::after
+  {
+    opacity: 0;
+  }
+  
+  .menuHidden
+  {
+    visibility: hidden;
+  }
+  
+  .menu a{
+    text-decoration:none
+  }
+  
+  
+  @media (max-width: 550px) 
+  {
+    .menuCell 
+    {
+      margin: 81.25px 25px;
+    }
+  }
+  
+  
+  @media (min-width: 550px) and (max-width: 825px) 
+  {
+    .menuCell:nth-child(3n) 
+    {
+      margin-right: calc(50% - 125px);
+      margin-left: calc(50% - 125px);
+    }
+  
+    .menuHidden:nth-child(3n + 5) 
+    {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 825px) and (max-width: 1100px) {
+   
+    .menuCell:nth-child(5n + 4) 
+    {
+      margin-left: calc(50% - 275px);
+    }
+  
+    .menuCell:nth-child(5n + 5) 
+    {
+      margin-right: calc(50% - 275px);
+    }
+  
+    .menuHidden:nth-child(5n), 
+    .menuHidden:nth-child(5n + 3) 
+    {
+      display: block;
+    }
+  }
+  @media (min-width: 1100px) 
+  {
+    .menuCell:nth-child(7n + 5) {
+      margin-left: calc(50% - 400px);
+    }
+  
+    .menuCell:nth-child(7n + 7), 
+    .menuCell:nth-child(7n + 5):nth-last-child(2) 
+    {
+      margin-right: calc(50% - 400px);
+    }
+  
+    .menuHidden:nth-child(7n + 7), 
+    .menuHidden:nth-child(7n + 9), 
+    .menuHidden:nth-child(7n + 11) 
+    {
+      display: block;
+    }
+  }
+
+body a{
+    color: white;
+}
+
+table {
+        overflow-y:scroll;
+        width:100%;
+        height: 500px;
+        display:block;
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        text-align: left;
+        }
+        tr:nth-child(even) {
+        background-color: #eee;
+        }
+        tr:nth-child(odd) {
+        background-color: #fff;
+        }
+        th {
+        background-color: black;
+        color: white;
+        }  
+
+.Center{
+    text-align: center;
+}
+
+.MenuHeader{
+  color: white;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  transform: translate(1%, 180%);
+}
+
+/* ChangePassword CSS */
+.Container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid yellow;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    background: #191919;
+    color: white;
+}
+
+.ContainerTwo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid yellow;
+    padding: 40px;
+    width: auto;
+    text-align: center;
+    background: #191919;
+    color: black;
+}
+
+
+
+.Container input[type = "text"],.Container input[type = "password"]{
+    border: 2px solid #3498db;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 10px;
+    width: 200;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.Container h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Container input[type = "text"]:focus,.Container input[type = "password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.Container input[type = "submit"]{
+    border: 2px solid #2ecc71;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.Container input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+
+.Container span{
+    display: block;
+}
+
+.Container a{
+    color: white;
+}
