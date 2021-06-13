@@ -69,13 +69,15 @@ def upload():
         db.session.commit()
         return redirect(url_for('library'))
     else:
-    	return redirect(url_for('error'))
+    	return redirect(url_for('upload'))
 
 # Library of the uploaded CSV Files
 @app.route('/library')
 def library():
 	library = TheFile.query.all()
 	return render_template('library.html', title="CSV Files", library=library)
+
+
 
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -405,6 +405,25 @@ body a
   color: white;
 }
 
+.ContainerTwo{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  border: 5px solid yellow;
+  padding: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 20s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  color: white;
+}
+
 .Container h1
 {
   color: white;
@@ -426,7 +445,7 @@ body a
   padding-bottom: 8px;
 }
 
-.ChooseButton{
+.ChooseButton {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 6px;
@@ -437,7 +456,7 @@ body a
   font-size: 16px;
 }
 
-.SubmitButton{
+.SubmitButton {
   margin-top: 20px;
   background-color: #008CBA; /* Green */
   border: none;
@@ -448,3 +467,23 @@ body a
   display: inline-block;
   font-size: 16px;
 }
+
+.ContainerTwo ul {
+  background: #4CAF50;
+  padding: 20px;
+  overflow:hidden; 
+  overflow-y:scroll;
+  height:400px;
+}
+
+.ContainerTwo ul li {
+  background: #cce5ff;
+  margin: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #000;
+}
+
+.ContainerTwo li a {
+  color:black
+} 

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <div class="Container">
+    <div class="ContainerTwo">
         <h1>CSV Files in Database</h1>
         <ul class="list-group">
         {% for file in library|reverse %}
@@ -9,6 +9,6 @@
     
         {% endfor %}
         </ul>
-        <a class="btn btn-success" href="upload_page">Upload a CSV File</a>
+        <a class="SubmitButton" href="upload_page">Upload a CSV File</a>
     </div>
 {% endblock %}
