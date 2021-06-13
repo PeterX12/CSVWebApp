@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="Container">
+        <h1>CSV Files in Database</h1>
+        <ul class="list-group">
+        {% for file in library|reverse %}
+            <li class="list-group-item"><a href="file/{{file.record_id}}">{{file.name}}</a></li>
+    
+        {% endfor %}
+        </ul>
+        <a class="btn btn-success" href="upload_page">Upload a CSV File</a>
+    </div>
+{% endblock %}
