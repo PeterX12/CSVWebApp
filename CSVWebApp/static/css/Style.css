@@ -145,21 +145,21 @@ nav a:nth-child(2):hover ~ #indicator
   
 nav a:nth-child(3):hover ~ #indicator
 {
-  width: 14%;
+  width: 13%;
   left: 44.5%;
   background: linear-gradient(130deg, purple, palevioletred);
 }
 
 nav a:nth-child(4):hover ~ #indicator
 {
-  width: 18%;
-  left: 58.5%;
+  width: 12%;
+  left: 65.5%;
   background: linear-gradient(130deg, yellow, black);
 }
   
 nav a:nth-child(5):hover ~ #indicator
 {
-  width: 13.5%;
+  width: 13%;
   left: 83.5%;
   background: linear-gradient(130deg, #f49f1c, #00154f);
 }

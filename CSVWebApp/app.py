@@ -6,6 +6,7 @@ import csv
 import io
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
+import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -77,7 +78,17 @@ def library():
 	library = TheFile.query.all()
 	return render_template('library.html', title="CSV Files", library=library)
 
+# Downloading the individual CSV files
+@app.route('/file/<int:record_id>/', methods=['GET'])
+def file(record_id):
+ 	myFiles = db.session.query(TheFile).filter(TheFile.record_id == record_id).first()
+ 	filename = myFiles.name 
+ 	return send_file(io.BytesIO(myFiles.data), attachment_filename=myFiles.name, as_attachment=True)
 
+# About Page
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
