@@ -5,7 +5,6 @@ import os
 import csv
 import io
 import sqlite3
-from flask_sqlalchemy import SQLAlchemy
 import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
@@ -63,7 +62,7 @@ def upload():
     # Get the name of the file to be uploaded
     selected_file = request.files['file']
     # Check if the file is a CSV file and is valid
-    if file and file_check(selected_file.filename):
+    if selected_file and file_check(selected_file.filename):
         filename = secure_filename(selected_file.filename)
         new_file = TheFile(name=filename, data=selected_file.read())
         db.session.add(new_file)
@@ -90,5 +89,11 @@ def file(record_id):
 def about():
     return render_template('about.html')
 
+# Stats Page
+@app.route('/stat')
+def stats():
+    return render_template('stats.html')
+     
 if __name__ == '__main__':
+
 	app.run(debug=True)

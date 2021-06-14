@@ -3,9 +3,9 @@
 {% block body %}
     <div class="ContainerTwo">
         <h1>CSV Files in Database</h1>
-        <ul class="list-group">
+        <ul>
         {% for file in library|reverse %}
-            <li class="list-group-item"><a href="file/{{file.record_id}}">{{file.name}}</a></li>
+            <li><a href="file/{{file.record_id}}">{{file.name}}</a></li>
     
         {% endfor %}
         </ul>
