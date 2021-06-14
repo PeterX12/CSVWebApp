@@ -69,7 +69,7 @@ def upload():
         db.session.commit()
         return redirect(url_for('library'))
     else:
-    	return redirect(url_for('upload'))
+    	return redirect(url_for('upload_page'))
 
 # Library of the uploaded CSV Files
 @app.route('/library')
